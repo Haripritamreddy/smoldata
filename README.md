@@ -1,0 +1,1 @@
+Experimenting on creating small datasets to finetune llm's on certain new topics which do not have datasets such as a new python library or a new topic, blog etc. Very hard coded and requires revision.
