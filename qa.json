@@ -1,0 +1,1146 @@
+[
+    {
+        "question": "What is FastHTML?",
+        "answer": "FastHTML is a new next-generation web framework for fast, scalable web applications with minimal, compact code."
+    },
+    {
+        "question": "What are the key features of FastHTML?",
+        "answer": "Powerful and expressive, fast and lightweight, easy to learn and use."
+    },
+    {
+        "question": "What programming language is FastHTML based on?",
+        "answer": "Python"
+    },
+    {
+        "question": "How do you install FastHTML?",
+        "answer": "You can install it with pip: `pip install python-fasthtml`"
+    },
+    {
+        "question": "What is the minimal app code for FastHTML?",
+        "answer": "`app,rt = fast_app()` followed by `@rt('/') def get(): return Div(P('Hello World!'), hx_get='/change')` and `serve()__`"
+    },
+    {
+        "question": "How do you run a FastHTML app?",
+        "answer": "With `python main.py`"
+    },
+    {
+        "question": "How do you add interactivity to a FastHTML app?",
+        "answer": "By using HTMX and modifying the app code to add a new route"
+    },
+    {
+        "question": "What is HTMX?",
+        "answer": "A JavaScript library that allows for hypermedia-based web development"
+    },
+    {
+        "question": "What are the next steps for learning more about FastHTML?",
+        "answer": "Start with the official sources: About, Documentation, and Idiomatic app"
+    },
+    {
+        "question": "Where can you find an intro video for FastHTML?",
+        "answer": "On the official FastHTML website"
+    },
+    {
+        "question": "What is the purpose of ft components in FastHTML?",
+        "answer": "ft components turn Python objects into HTML."
+    },
+    {
+        "question": "What is the syntax for defining a function that returns ft components?",
+        "answer": "def example(): return Div(H1(\"FastHTML APP\"), P(\"Let's do this\"), cls=\"go\")"
+    },
+    {
+        "question": "What is the output of the example function defined above?",
+        "answer": "<div class=\"go\"><h1>FastHTML APP</h1><p>Let's do this</p></div>"
+    },
+    {
+        "question": "What are the characteristics of ft components at their most fundamental level?",
+        "answer": "ft components are Python callables, return a sequence of values, and have three elements: the tag to be generated, the content of the tag, and a dictionary of XML attributes and their values."
+    },
+    {
+        "question": "How does FastHTML name ft components?",
+        "answer": "FastHTML uses PascalCase for naming ft components, breaking from PEP8, which specifies snake_case_pattern."
+    },
+    {
+        "question": "Why does FastHTML use PascalCase for naming ft components?",
+        "answer": "It makes for easier reading of FastHTML code and makes sense since ft components can be made from any callable type."
+    },
+    {
+        "question": "What are some of the default ft components in FastHTML?",
+        "answer": "FastHTML has over 150 ft components, including HTML tags such as <div>, <p>, <a>, <title>, and more, as well as extra tags like Titled and Socials."
+    },
+    {
+        "question": "How can people who prefer to write code using namespaces while adhering to PEP8 use FastHTML?",
+        "answer": "They can use the `fasthtml.ft` namespace to write code."
+    },
+    {
+        "question": "What is the role of attributes in ft components?",
+        "answer": "Attributes in ft components handle XML attributes and their values, which are rendered as HTML attributes."
+    },
+    {
+        "question": "How do ft components handle boolean values for attributes?",
+        "answer": "Attributes set to the boolean value of True are rendered with just the name of the attribute, while attributes set to the boolean value of False do not appear in the rendered output."
+    },
+    {
+        "question": "How do ft components handle non-string values for attributes?",
+        "answer": "Non-string values are converted to strings in the rendered output."
+    },
+    {
+        "question": "How do ft components handle class as an attribute?",
+        "answer": "FastHTML uses the `cls` argument to set the HTML class, as `class` is a reserved word in Python."
+    },
+    {
+        "question": "How do ft components handle reserved words in Python as attribute names?",
+        "answer": "Any named argument passed into an ft component has the leading underscore stripped away before rendering."
+    },
+    {
+        "question": "How do ft components handle attribute names that cannot be represented as a Python variable?",
+        "answer": "In cases like these, an unpacked dict can be used to represent these values."
+    },
+    {
+        "question": "How do ft components handle the `for` attribute?",
+        "answer": "The use of `_for` on an argument will have the leading underscore stripped during render, and can also use `fr` as that will be expanded to `for`."
+    },
+    {
+        "question": "How can you create your own ft components that generate non-standard tags?",
+        "answer": "It is possible and sometimes useful to create your own ft components by defining new tags flexibly."
+    },
+    {
+        "question": "What is FastHTML and how is it different from other web frameworks?",
+        "answer": "FastHTML is a web framework that allows you to build web applications using only Python. It is similar to FastAPI, but focuses on returning HTML data instead of JSON data."
+    },
+    {
+        "question": "How do I install FastHTML?",
+        "answer": "You can install FastHTML using pip with the command `pip install python-fasthtml`."
+    },
+    {
+        "question": "What is the core usage of FastHTML?",
+        "answer": "The core usage of FastHTML is to define routes and then define what to do at each route."
+    },
+    {
+        "question": "How do I define a route in FastHTML?",
+        "answer": "You can define a route in FastHTML using the `@app.route` decorator and specifying the route path and method."
+    },
+    {
+        "question": "What is the difference between `@app.get` and `@app.route` in FastHTML?",
+        "answer": "`@app.get` is a shorthand for `@app.route` with the method set to 'get'. You can use either one to define a GET route."
+    },
+    {
+        "question": "How do I add a CSS file to my HTML in FastHTML?",
+        "answer": "You can add a CSS file to your HTML in FastHTML using the `<link>` tag or by adding a stylesheet to the `hdrs` parameter when creating the FastHTML app."
+    },
+    {
+        "question": "What is HTMX and how does it work with FastHTML?",
+        "answer": "HTMX is a library that allows you to trigger requests from any element on a page and update a part of the page without refreshing the entire page. It works with FastHTML by allowing you to specify attributes on HTML tags to trigger requests and update the page."
+    },
+    {
+        "question": "How do I use websockets with FastHTML?",
+        "answer": "You can use websockets with FastHTML by specifying the `ws_hdr=True` parameter when creating the FastHTML app and then defining a websocket route using the `@app.ws` decorator."
+    },
+    {
+        "question": "What is an FT object and how is it used in FastHTML?",
+        "answer": "An FT object is a 3-element list that represents a FastTag structure, which can be used to create HTML elements in FastHTML."
+    },
+    {
+        "question": "How do I render custom JavaScript and CSS code in FastHTML?",
+        "answer": "You can render custom JavaScript and CSS code in FastHTML by using the `Script` and `Style` tags and specifying the source of the code."
+    },
+    {
+        "question": "How do I deploy a FastHTML app?",
+        "answer": "You can deploy a FastHTML app using Railway, Replit, or HuggingFace."
+    },
+    {
+        "question": "What is the difference between `hx_swap='innerHTML'` and `hx_swap='outerHTML'` in HTMX?",
+        "answer": "`hx_swap='innerHTML'` replaces the content of the target element, while `hx_swap='outerHTML'` replaces the entire element."
+    },
+    {
+        "question": "What is the `hx_trigger` attribute in HTMX and how does it work?",
+        "answer": "The `hx_trigger` attribute specifies the event that triggers the request, such as a click or a hover."
+    },
+    {
+        "question": "How do I use the `proc_htmx` function in FastHTML?",
+        "answer": "You can use the `proc_htmx` function to apply a function to elements matching a selector, including the element that triggered the event."
+    },
+    {
+        "question": "What is the `request` argument in FastHTML and how is it used?",
+        "answer": "The `request` argument is a special argument that gets the raw Starlette `Request` object, which can be used to access request data and headers."
+    },
+    {
+        "question": "How do I set a cookie in FastHTML?",
+        "answer": "You can set a cookie in FastHTML by using the `set_cookie` method of the `Response` object."
+    },
+    {
+        "question": "What is the `session` argument in FastHTML and how is it used?",
+        "answer": "The `session` argument is a special argument that gets the session object, which can be used to store and retrieve data in the user's browser."
+    },
+    {
+        "question": "How does Cloudflare protect email addresses on a website from spammers?",
+        "answer": "Cloudflare protects email addresses on a website from spammers by hiding them, which prevents malicious bots from accessing them."
+    },
+    {
+        "question": "Can I sign up for Cloudflare?",
+        "answer": "Yes, you can sign up for Cloudflare to protect your website in a similar way."
+    },
+    {
+        "question": "What is the basic scaffolding for handling OAuth?",
+        "answer": "It is not yet thoroughly tested. See the docs page for an explanation of how to use this."
+    },
+    {
+        "question": "What are the available OAuth clients?",
+        "answer": "GoogleAppClient, GitHubAppClient, HuggingFaceClient"
+    },
+    {
+        "question": "How do I generate a login link for a client using `client.login_link()`?",
+        "answer": "client.login_link() can be used to generate a login link, example: client = GoogleAppClient(\"YOUR_CLIENT_ID\",\"YOUR_CLIENT_SECRET\",redirect_uri)"
+    },
+    {
+        "question": "How do I generate a login link for a client with state using `client.login_link_with_state()`?",
+        "answer": "client.login_link_with_state() can be used to generate a login link with state, example: client = HuggingFaceClient(\"YOUR_CLIENT_ID\",\"YOUR_CLIENT_SECRET\",redirect_uri), print(client.login_link_with_state(state=\"test_state\"))"
+    },
+    {
+        "question": "What is the purpose of `_AppClient.parse_response()`?",
+        "answer": "Get the token from the oauth2 server response"
+    },
+    {
+        "question": "What is the purpose of `_AppClient.get_info()`?",
+        "answer": "Get the info for authenticated user"
+    },
+    {
+        "question": "What is the purpose of `_AppClient.retr_info()`?",
+        "answer": "Combines `parse_response` and `get_info`"
+    },
+    {
+        "question": "What is the purpose of `_AppClient.retr_id()`?",
+        "answer": "Call `retr_info` and then return id/subscriber value"
+    },
+    {
+        "question": "What can you do after logging in via the provider?",
+        "answer": "You can use client.retr_info(code) to get all the profile information, or client.retr_id(code) to get just the user\u2019s ID."
+    },
+    {
+        "question": "How do you access the access token after logging in?",
+        "answer": "You can access the access token with `client.token['access_token']` after either of the calls to `client.retr_info(code)` or `client.retr_id(code)`. "
+    },
+    {
+        "question": "What is the FastHTML introduction tutorial called?",
+        "answer": "FastHTML By Example"
+    },
+    {
+        "question": "What type of tutorial is Web Devs Quickstart?",
+        "answer": "A fast introduction"
+    },
+    {
+        "question": "What can you learn by doing the BYO Blog tutorial?",
+        "answer": "The foundations of FastHTML"
+    },
+    {
+        "question": "What type of website can you build step-by-step with the JS App Walkthrough tutorial?",
+        "answer": "A website with custom JavaScript"
+    },
+    {
+        "question": "How many examples are included in the FastHTML By Example tutorial?",
+        "answer": "Four complete examples"
+    },
+    {
+        "question": "What type of developers is the Web Devs Quickstart tutorial for?",
+        "answer": "Experienced web developers"
+    },
+    {
+        "question": "What is FastHTML?",
+        "answer": "FastHTML is a Python library for creating web applications"
+    },
+    {
+        "question": "How do you install FastHTML?",
+        "answer": "You can install FastHTML using pip with the command `pip install python-fasthtml`"
+    },
+    {
+        "question": "What is a minimal FastHTML application?",
+        "answer": "A minimal FastHTML application looks something like the example provided, with the `fast_app()` function, `rt()` decorator, and `serve()` function"
+    },
+    {
+        "question": "What is the `rt()` decorator used for?",
+        "answer": "The `rt()` decorator is used to tell FastHTML what to return when a user visits a certain URL"
+    },
+    {
+        "question": "How do you add variable sections to a URL in FastHTML?",
+        "answer": "You can add variable sections to a URL by marking them with `{variable_name}` and defining a function with the same name and type as the variable"
+    },
+    {
+        "question": "What is the difference between `fast_app()` and `fast_app(debug=True)`?",
+        "answer": "The `fast_app(debug=True)` function runs FastHTML in debug mode, which displays an error screen in the browser when an error is thrown"
+    },
+    {
+        "question": "How do you serve static media files in FastHTML?",
+        "answer": "You can serve static media files using the `Script` and `Link` functions, which generate HTML tags for including JavaScript and CSS files"
+    },
+    {
+        "question": "What is the `ft` component in FastHTML?",
+        "answer": "The `ft` component is a way to define reusable HTML components in Python"
+    },
+    {
+        "question": "How do you test views in notebooks with FastHTML?",
+        "answer": "You can test views in notebooks by using the Starlette test client and running the `fast_app()` function with the `default_hdrs=False` argument"
+    },
+    {
+        "question": "What is the difference between `__ft__` and `str()` in FastHTML?",
+        "answer": "The `__ft__` method is called when rendering a component, while `str()` is called on other Python objects"
+    },
+    {
+        "question": "How do you set cookies in FastHTML?",
+        "answer": "You can set cookies using the `cookie()` function, which takes a name and value as arguments"
+    },
+    {
+        "question": "How do you store data in the user's browser in FastHTML?",
+        "answer": "You can store data in the user's browser using the `session` argument in routes, which is a Python dictionary"
+    },
+    {
+        "question": "What are toasts in FastHTML?",
+        "answer": "Toasts are small notifications in colored boxes used to notify users that something has happened"
+    },
+    {
+        "question": "How do you implement authentication and authorization in FastHTML?",
+        "answer": "You can implement authentication and authorization using Beforeware, which are functions that run before the route handler is called"
+    },
+    {
+        "question": "What is an ft component?",
+        "answer": "an ft component is an item that can be used to create HTML content"
+    },
+    {
+        "question": "Why would you need a custom ft component?",
+        "answer": "to create a unique HTML tag that is not part of the default fasthtml components"
+    },
+    {
+        "question": "What is the NotStr class used for?",
+        "answer": "to use an HTML tag as a string, but it quickly becomes harder to work with as complexity grows"
+    },
+    {
+        "question": "How does Automatic Creation work?",
+        "answer": "FastHTML generates the component function for you, based on the tag name"
+    },
+    {
+        "question": "What is the purpose of the Tip section?",
+        "answer": "to provide additional information or clarification on a specific topic"
+    },
+    {
+        "question": "What is the difference between Automatic Creation and Manual Creation?",
+        "answer": "Automatic Creation is a higher-level option that lets FastHTML generate the component function for you, while Manual Creation requires you to call the __getattr__ function yourself"
+    },
+    {
+        "question": "What is the purpose of the __getattr__ function?",
+        "answer": "to get an attribute from a module, and in fasthtml.components, it is used to create components automatically"
+    },
+    {
+        "question": "How can you customize the behavior of FastHTML's component creation?",
+        "answer": "by modifying the __getattr__ function or using the ft_hx function to create a custom component"
+    },
+    {
+        "question": "What is the purpose of the ft_hx function?",
+        "answer": "to create a custom component with a specific name and behavior"
+    },
+    {
+        "question": "How can you create a custom component with underscores in the tag name?",
+        "answer": "by defining a function that calls ft_hx with the tag name containing underscores"
+    },
+    {
+        "question": "How can you create a custom component with symbols (like @) in the tag name?",
+        "answer": "by defining a function that calls ft_hx with the tag name containing symbols"
+    },
+    {
+        "question": "How can you create a custom component with symbols (like @) in the tag attributes?",
+        "answer": "by defining the attributes using a dictionary"
+    },
+    {
+        "question": "What is the purpose of the FastHTML library?",
+        "answer": "FastHTML is a Python library that helps build web applications with ease."
+    },
+    {
+        "question": "What is the main difference between FastHTML and other Python web frameworks?",
+        "answer": "FastHTML is designed to be more straightforward and easier to use than other popular Python web frameworks like Flask and Django."
+    },
+    {
+        "question": "What is the `date` function in FastHTML used for?",
+        "answer": "The `date` function is used to convert a string to a datetime object."
+    },
+    {
+        "question": "How does the `snake2hyphens` function work?",
+        "answer": "The `snake2hyphens` function converts a string from snake case to hyphenated and capitalized format."
+    },
+    {
+        "question": "What is the purpose of the `HtmxHeaders` class?",
+        "answer": "The `HtmxHeaders` class is used to create a dictionary of headers for HTMX requests."
+    },
+    {
+        "question": "What is the `str2int` function used for?",
+        "answer": "The `str2int` function is used to convert a string to an integer."
+    },
+    {
+        "question": "How does the `form2dict` function work?",
+        "answer": "The `form2dict` function is used to convert a starlette form data to a dictionary."
+    },
+    {
+        "question": "What is the purpose of the `HttpHeader` class?",
+        "answer": "The `HttpHeader` class is used to create a dictionary of HTTP headers."
+    },
+    {
+        "question": "How does the `flat_xt` function work?",
+        "answer": "The `flat_xt` function is used to flatten lists."
+    },
+    {
+        "question": "What is the purpose of the `Beforeware` class?",
+        "answer": "The `Beforeware` class is used to initialize the middleware stack."
+    },
+    {
+        "question": "What is the purpose of the `WS_RouteX` class?",
+        "answer": "The `WS_RouteX` class is used to create a WebSocket route."
+    },
+    {
+        "question": "How does the `uri` function work?",
+        "answer": "The `uri` function is used to create a URL from a string."
+    },
+    {
+        "question": "What is the purpose of the `decode_uri` function?",
+        "answer": "The `decode_uri` function is used to decode a URL string."
+    },
+    {
+        "question": "What is the purpose of the `StringConvertor.to_string` function?",
+        "answer": "The `StringConvertor.to_string` function is used to convert a string to a string."
+    },
+    {
+        "question": "What is the purpose of the `HTTPConnection.url_path_for` function?",
+        "answer": "The `HTTPConnection.url_path_for` function is used to create a URL from a string."
+    },
+    {
+        "question": "How does the `RouteX` class work?",
+        "answer": "The `RouteX` class is used to create a route for the application."
+    },
+    {
+        "question": "What is the purpose of the `RouterX` class?",
+        "answer": "The `RouterX` class is used to create a router for the application."
+    },
+    {
+        "question": "What is the purpose of the `get_key` function?",
+        "answer": "The `get_key` function is used to generate a session key."
+    },
+    {
+        "question": "How does the `FastHTML` class work?",
+        "answer": "The `FastHTML` class is used to create a FastHTML application instance."
+    },
+    {
+        "question": "What is the purpose of the `FastHTML.route` method?",
+        "answer": "The `FastHTML.route` method is used to add a route to the application."
+    },
+    {
+        "question": "What is the purpose of the `serve` function?",
+        "answer": "The `serve` function is used to run the application in an async server."
+    },
+    {
+        "question": "What is the purpose of the `cookie` function?",
+        "answer": "The `cookie` function is used to create a cookie."
+    },
+    {
+        "question": "How does the `reg_re_param` function work?",
+        "answer": "The `reg_re_param` function is used to register a regular expression parameter."
+    },
+    {
+        "question": "What is the purpose of the `MiddlewareBase` class?",
+        "answer": "The `MiddlewareBase` class is used to create a middleware base class."
+    },
+    {
+        "question": "How does the `get_cli` function work?",
+        "answer": "The `get_cli` function is used to get a client instance and a router instance for the application."
+    },
+    {
+        "question": "What is the purpose of the `test_r` function?",
+        "answer": "The `test_r` function is used to test a route with a client instance."
+    },
+    {
+        "question": "How does the `FastHTMLWithLiveReload` class work?",
+        "answer": "The `FastHTMLWithLiveReload` class is used to create a FastHTML application instance with live reload."
+    },
+    {
+        "question": "What is OAuth?",
+        "answer": "OAuth is an open standard for 'access delegation', commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords."
+    },
+    {
+        "question": "What is the OAuth flow?",
+        "answer": "The OAuth flow involves several steps, including redirecting the user to the provider's authorization URL, obtaining a code from the provider, and using that code to obtain an access token."
+    },
+    {
+        "question": "How do I set up an OAuth app in GitHub?",
+        "answer": "To set up an OAuth app in GitHub, go to https://github.com/settings/developers, click 'New OAuth App', and fill in the form with the required values, including the application name, homepage URL, and authorization callback URL."
+    },
+    {
+        "question": "What values do I need to store in a safe place after setting up an OAuth app in GitHub?",
+        "answer": "You need to store the client ID and client secret in a safe place after setting up an OAuth app in GitHub."
+    },
+    {
+        "question": "How do I create a GitHubAppClient object in FastHTML?",
+        "answer": "You can create a GitHubAppClient object in FastHTML by passing the client ID, client secret, and redirect URI to the GitHubAppClient constructor."
+    },
+    {
+        "question": "What is the purpose of the login_link() method in the GitHubAppClient class?",
+        "answer": "The login_link() method returns the URL that the user should be redirected to in order to grant access to their GitHub account."
+    },
+    {
+        "question": "How do I handle the OAuth flow in FastHTML?",
+        "answer": "You can handle the OAuth flow in FastHTML by setting up a route to handle the redirect URI and using the client.retr_info() method to obtain an access token."
+    },
+    {
+        "question": "How do I store the user's ID in the session object?",
+        "answer": "You can store the user's ID in the session object by using the session['user_id'] = user_id statement."
+    },
+    {
+        "question": "What is the purpose of the Beforeware class in FastHTML?",
+        "answer": "The Beforeware class is used to check if the user is authenticated before allowing them to access a route."
+    },
+    {
+        "question": "How do I revoke an access token programmatically?",
+        "answer": "You can revoke an access token programmatically by sending a request to the provider's revoke URL with the access token as a parameter."
+    },
+    {
+        "question": "What is the purpose of the state parameter in the login_link_with_state() method?",
+        "answer": "The state parameter is used to pass a unique string through the OAuth flow to prevent CSRF attacks."
+    },
+    {
+        "question": "How do I add a state string to the OAuth flow?",
+        "answer": "You can add a state string to the OAuth flow by using the client.login_link_with_state() method instead of client.login_link()."
+    },
+    {
+        "question": "Why is FastHTML developed using notebooks?",
+        "answer": "Some people are under the impression that writing software in notebooks is bad. We\u2019ve used Jupyter notebooks exported via `nbdev` to write a wide range of \u201cvery serious\u201d software projects over the last three years."
+    },
+    {
+        "question": "Why not pyproject.toml for packaging?",
+        "answer": "FastHTML uses a `setup.py` module instead of a `pyproject.toml` file to configure itself for installation because `pyproject.toml` is not compatible with nbdev, which is what is used to write and build FastHTML."
+    },
+    {
+        "question": "Why not JSX?",
+        "answer": "We think there\u2019s no benefit\u2026 Python\u2019s positional and kw args precisely 1:1 map already to html/xml children and attrs, so there\u2019s no need for a new syntax."
+    },
+    {
+        "question": "Why use `import *`?",
+        "answer": "First, through the use of the `__all__` attribute in our Python modules we control what actually gets imported. So there\u2019s no risk of namespace pollution. Second, our style lends itself to working in rather compact Jupyter notebooks and small Python modules. Hence we know about the source code whose libraries we `import *` from. This terseness means we can develop faster."
+    },
+    {
+        "question": "Can FastHTML be used for dashboards?",
+        "answer": "Yes it can. In fact, it excels at building dashboards. In addition to being great for building static dashboards, because of its foundation in ASGI and tech stack, FastHTML natively supports Websockets. That means using FastHTML we can create dashboards that autoupdate."
+    },
+    {
+        "question": "Why the distinctive coding style?",
+        "answer": "FastHTML coding style is the fastai coding style. If you are coming from a data science background the **fastai coding style** may already be your preferred style."
+    },
+    {
+        "question": "What does railway_link do?",
+        "answer": "Links the current directory to the current project\u2019s Railway service"
+    },
+    {
+        "question": "What is railway_deploy used for?",
+        "answer": "Deploy a FastHTML app to Railway"
+    },
+    {
+        "question": "What is the type and default value of the name parameter in railway_deploy?",
+        "answer": "name | str |  | The project name to deploy"
+    },
+    {
+        "question": "What is the default value of the mount parameter in railway_deploy?",
+        "answer": "True"
+    },
+    {
+        "question": "What does the mount parameter in railway_deploy do?",
+        "answer": "Create a mounted volume at /app/data"
+    },
+    {
+        "question": "What software is needed to complete the tutorial?",
+        "answer": "Python, a Python package manager such as pip or uv, FastHTML, a web browser, and a Railway.app account."
+    },
+    {
+        "question": "How do I install FastHTML?",
+        "answer": "For Mac, Windows, and Linux, enter pip install python-fasthtml __."
+    },
+    {
+        "question": "What is the first step in this section?",
+        "answer": "By the end of this section, you\u2019ll have your own FastHTML website with tests deployed to railway.app."
+    },
+    {
+        "question": "What is the purpose of the QuickDraw tutorial?",
+        "answer": "The end result of this tutorial will be QuickDraw, a real-time collaborative drawing app using FastHTML."
+    },
+    {
+        "question": "What is a drawing room?",
+        "answer": "A drawing room is a separate drawing space where a user can let their inner Picasso shine."
+    },
+    {
+        "question": "How do I create a room?",
+        "answer": "When a user submits the \u201cCreate Room\u201d form, this route is called. It creates a new Room object, sets the creation time, and inserts it into the database."
+    },
+    {
+        "question": "How do I specify a render function to convert my dataclass into HTML?",
+        "answer": "We\u2019re using a SQLite database (via FastLite) to store our rooms. Each room has an id (integer), a name (string), and a created_at timestamp (string). The Room dataclass is automatically generated based on this structure."
+    },
+    {
+        "question": "How do I save and load drawings?",
+        "answer": "We\u2019ll modify our database schema to include a canvas_data field, and add new routes for saving and loading canvas data."
+    },
+    {
+        "question": "What is the purpose of the save button?",
+        "answer": "The save button grabs the canvas\u2019 state and sends it to the server."
+    },
+    {
+        "question": "How do I save and load canvas data?",
+        "answer": "We\u2019ll add routes for saving and loading canvas data, and update the JavaScript to load existing canvas data."
+    },
+    {
+        "question": "How do I deploy my website to Railway?",
+        "answer": "To deploy your website, run the following command in your terminal in the root directory of your project: fh_railway_deploy quickdraw __."
+    },
+    {
+        "question": "What are the key features of the QuickDraw app?",
+        "answer": "The QuickDraw app allows users to create a new room, save and load drawings, and collaborate with others in real-time."
+    },
+    {
+        "question": "What is the purpose of the fabric.js library?",
+        "answer": "The fabric.js library is used to create an interactive drawing canvas."
+    },
+    {
+        "question": "What is live reloading in FastHTML?",
+        "answer": "FastHTML supports live reloading which means that it watches for any changes to your code and automatically refreshes the webpage in your browser."
+    },
+    {
+        "question": "How to enable live reloading in FastHTML?",
+        "answer": "To enable live reloading simply replace `FastHTML` in your app with `FastHTMLWithLiveReload`."
+    },
+    {
+        "question": "What is the syntax to create an instance of `FastHTMLWithLiveReload`?",
+        "answer": "app = FastHTMLWithLiveReload()__"
+    },
+    {
+        "question": "How to run the app with live reloading using `uvicorn`?",
+        "answer": "uvicorn main:app --reload"
+    },
+    {
+        "question": "What are the gotchas of using `FastHTMLWithLiveReload`?",
+        "answer": "A reload is only triggered when you save your changes. `FastHTMLWithLiveReload` should only be used during development. If your app spans multiple directories you might need to use the `--reload-dir` flag to watch all files in each directory."
+    },
+    {
+        "question": "How to enable live reloading using the `fast_app` function?",
+        "answer": "fast_app(live=True)"
+    },
+    {
+        "question": "What is the difference between `fast_app()` and `FastHTMLWithLiveReload`?",
+        "answer": "`fast_app()` instantiates the `FastHTMLWithLiveReload` class."
+    },
+    {
+        "question": "What is the purpose of the `serve()` function?",
+        "answer": "serve() is a wrapper around a `uvicorn` call."
+    },
+    {
+        "question": "How to run `main.py` in live reload mode?",
+        "answer": "Just do `python main.py`."
+    },
+    {
+        "question": "How do I render FT Components into HTML within a Jupyter notebook?",
+        "answer": "Using the `show` function, for example: `show(sentence)`"
+    },
+    {
+        "question": "What is the difference between `show` function and not using it?",
+        "answer": "When placed within the `show()` function, the HTML is rendered in Jupyter notebooks, otherwise the raw HTML is displayed"
+    },
+    {
+        "question": "How do I convert HTML to an `ft` expression?",
+        "answer": "Using the `html2ft` function, for example: `html2ft(html)`"
+    },
+    {
+        "question": "What is the purpose of `attrmap_x` function?",
+        "answer": "Not specified in the provided context"
+    },
+    {
+        "question": "How do I fill named items in a form using attributes in an object?",
+        "answer": "Using the `fill_form` function, for example: `fill_form(form, todo)`"
+    },
+    {
+        "question": "How do I modify a dataclass in-place and return it?",
+        "answer": "Using the `fill_dataclass` function, for example: `fill_dataclass(todo, nt)`"
+    },
+    {
+        "question": "How do I recursively find all elements in an element with a certain tag and attributes?",
+        "answer": "Using the `find_inputs` function, for example: `find_inputs(form, id='title')`"
+    },
+    {
+        "question": "What is the purpose of `getattr` function?",
+        "answer": "Not specified in the provided context"
+    },
+    {
+        "question": "How do I create a file component?",
+        "answer": "Using the `File` function, for example: `File(fname)`"
+    },
+    {
+        "question": "How do I create an HTML component?",
+        "answer": "Using the `ft_html` function, for example: `ft_html('a', _at_click_dot_away=1)`"
+    },
+    {
+        "question": "How do I create an HTML component with a target ID?",
+        "answer": "Using the `ft_hx` function, for example: `ft_hx('a', target_id='tgt')`"
+    },
+    {
+        "question": "What is the purpose of `hx_vals` attribute?",
+        "answer": "Not specified in the provided context"
+    },
+    {
+        "question": "How do I fill a form with data from an object?",
+        "answer": "Using the `fill_form` function, for example: `fill_form(form, todo)`"
+    },
+    {
+        "question": "How do I modify a dataclass using data from an object?",
+        "answer": "Using the `fill_dataclass` function, for example: `fill_dataclass(todo, nt)`"
+    },
+    {
+        "question": "How do I recursively find all input elements in an element?",
+        "answer": "Using the `find_inputs` function, for example: `find_inputs(form, id='title')`"
+    },
+    {
+        "question": "What is the purpose of `from_xml` function?",
+        "answer": "Not specified in the provided context"
+    },
+    {
+        "question": "How do I convert an FT expression to HTML?",
+        "answer": "Using the `html2ft` function, for example: `html2ft(ft)`"
+    },
+    {
+        "question": "How do I convert an FT expression to HTML with attributes first?",
+        "answer": "Using the `html2ft` function with `attr1st=True`, for example: `html2ft(ft, attr1st=True)`"
+    },
+    {
+        "question": "What is the purpose of the light_media function in FastHTML?",
+        "answer": "To render light media for day mode views"
+    },
+    {
+        "question": "What is the purpose of the dark_media function in FastHTML?",
+        "answer": "To render dark media for night mode views"
+    },
+    {
+        "question": "What is the purpose of the MarkdownJS function in FastHTML?",
+        "answer": "To implement browser-based markdown rendering"
+    },
+    {
+        "question": "What is the purpose of the KatexMarkdownJS function in FastHTML?",
+        "answer": "To implement browser-based markdown rendering with LaTeX support"
+    },
+    {
+        "question": "What is the purpose of the HighlightJS function in FastHTML?",
+        "answer": "To implement browser-based syntax highlighting"
+    },
+    {
+        "question": "What is the purpose of the SortableJS function in FastHTML?",
+        "answer": "To implement browser-based sortable elements"
+    },
+    {
+        "question": "How do I use the light_media function in FastHTML?",
+        "answer": "By calling light_media(css: str) and passing in the CSS to be included in the light media query"
+    },
+    {
+        "question": "How do I use the dark_media function in FastHTML?",
+        "answer": "By calling dark_media(css: str) and passing in the CSS to be included in the dark media query"
+    },
+    {
+        "question": "How do I use the MarkdownJS function in FastHTML?",
+        "answer": "By calling MarkdownJS(sel: str) and passing in the CSS selector for markdown elements"
+    },
+    {
+        "question": "How do I use the KatexMarkdownJS function in FastHTML?",
+        "answer": "By calling KatexMarkdownJS(sel: str, inline_delim: str, display_delim: str, math_envs: NoneType) and passing in the CSS selector, delimiter for inline math, delimiter for long math, and list of environments to render as display math"
+    },
+    {
+        "question": "How do I use the HighlightJS function in FastHTML?",
+        "answer": "By calling HighlightJS(sel: str, langs: str|list|tuple, light: str, dark: str) and passing in the CSS selector for code elements, languages to highlight, light theme, and dark theme"
+    },
+    {
+        "question": "How do I use the SortableJS function in FastHTML?",
+        "answer": "By calling SortableJS(sel: str, ghost_class: str) and passing in the CSS selector for sortable elements and the class used to distinguish an element when being dragged"
+    },
+    {
+        "question": "What is Behaviour in FastHTML apps defined by?",
+        "answer": "routes"
+    },
+    {
+        "question": "What is the syntax for routes in FastHTML similar to?",
+        "answer": "FastAPI"
+    },
+    {
+        "question": "Why should you use FastAPI instead of FastHTML for creating a JSON service?",
+        "answer": "Because FastHTML is mainly for making HTML web apps, not APIs"
+    },
+    {
+        "question": "What do you need to include in your route parameters in FastHTML?",
+        "answer": "The types of your parameters, so that FastHTML knows what to pass to your function"
+    },
+    {
+        "question": "How do you run a FastHTML app in uvicorn?",
+        "answer": "By saving it into a file such as main.py, and then running it in uvicorn using uvicorn main:app"
+    },
+    {
+        "question": "What is used behind the scenes by Starlette's TestClient?",
+        "answer": "httpx"
+    },
+    {
+        "question": "What attribute of a httpx.Response object contains the response body?",
+        "answer": "text"
+    },
+    {
+        "question": "Why do you often call your functions _ when using this style of route in FastHTML?",
+        "answer": "Because you never actually call it directly, it's just called through HTTP"
+    },
+    {
+        "question": "What is an alternative approach to creating a route in FastHTML?",
+        "answer": "Using app.route instead"
+    },
+    {
+        "question": "What is a common pattern for creating routes in FastHTML?",
+        "answer": "Making the function name the HTTP method you want"
+    },
+    {
+        "question": "What is the recommended name for app.route in FastHTML?",
+        "answer": "rt"
+    },
+    {
+        "question": "What does the basic_auth decorator do in FastHTML?",
+        "answer": "It checks for a specific token in the request headers and returns a response if it's not valid"
+    },
+    {
+        "question": "What is the key advantage of using custom decorators for adding specific functionality to routes in FastHTML?",
+        "answer": "The ability to apply different behaviors to different routes"
+    },
+    {
+        "question": "How can you apply multiple decorators to a single route in FastHTML?",
+        "answer": "By stacking them on top of each other"
+    },
+    {
+        "question": "What is app level beforeware in FastHTML?",
+        "answer": "A global operation that runs before any route is called"
+    },
+    {
+        "question": "What is route level beforeware in FastHTML?",
+        "answer": "A custom functionality that runs before a specific route is called"
+    },
+    {
+        "question": "What is the purpose of the `set_pico_cls` function?",
+        "answer": "To make jupyter outputs styled with pico"
+    },
+    {
+        "question": "What are the parameters of the `A` tag?",
+        "answer": "c, hx_get=None, target_id=None, hx_swap=None, href='#', hx_vals=None, id=None, cls=None, title=None, style=None, accesskey=None, contenteditable=None, dir=None, draggable=None, enterkeyhint=None, hidden=None, inert=None, inputmode=None, lang=None, popover=None, spellcheck=None, tabindex=None, translate=None, hx_post=None, hx_put=None, hx_delete=None, hx_patch=None, hx_trigger=None, hx_target=None, hx_include=None, hx_select=None, hx_indicator=None, hx_push_url=None, hx_confirm=None, hx_disable=None, hx_replace_url=None, hx_on=None, **kwargs"
+    },
+    {
+        "question": "What are the parameters of the `Form` tag?",
+        "answer": "c, enctype='multipart/form-data', target_id=None, hx_vals=None, id=None, cls=None, title=None, style=None, accesskey=None, contenteditable=None, dir=None, draggable=None, enterkeyhint=None, hidden=None, inert=None, inputmode=None, lang=None, popover=None, spellcheck=None, tabindex=None, translate=None, hx_get=None, hx_post=None, hx_put=None, hx_delete=None, hx_patch=None, hx_trigger=None, hx_target=None, hx_swap=None, hx_include=None, hx_select=None, hx_indicator=None, hx_push_url=None, hx_confirm=None, hx_disable=None, hx_replace_url=None, hx_on=None, **kwargs"
+    },
+    {
+        "question": "What is the purpose of the `AX` tag?",
+        "answer": "An A tag with just one text child, allowing hx_get, target_id, and hx_swap to be positional params"
+    },
+    {
+        "question": "What is the purpose of the `Hidden` tag?",
+        "answer": "An Input of type \u2018hidden\u2019"
+    },
+    {
+        "question": "What are the parameters of the `CheckboxX` tag?",
+        "answer": "checked:bool=False, label=None, value='1', id=None, name=None, target_id=None, hx_vals=None, cls=None, title=None, style=None, accesskey=None, contenteditable=None, dir=None, draggable=None, enterkeyhint=None, hidden=None, inert=None, inputmode=None, lang=None, popover=None, spellcheck=None, tabindex=None, translate=None, hx_get=None, hx_post=None, hx_put=None, hx_delete=None, hx_patch=None, hx_trigger=None, hx_target=None, hx_swap=None, hx_include=None, hx_select=None, hx_indicator=None, hx_push_url=None, hx_confirm=None, hx_disable=None, hx_replace_url=None, hx_on=None, **kwargs"
+    },
+    {
+        "question": "What is the purpose of the `Card` tag?",
+        "answer": "A PicoCSS Card, implemented as an Article with optional Header and Footer"
+    },
+    {
+        "question": "What is the purpose of the `Group` tag?",
+        "answer": "A PicoCSS Group, implemented as a Fieldset with role \u2018group\u2019"
+    },
+    {
+        "question": "What is the purpose of the `Search` tag?",
+        "answer": "A PicoCSS Search, implemented as a Form with role \u2018search\u2019"
+    },
+    {
+        "question": "What is the purpose of the `Grid` tag?",
+        "answer": "A PicoCSS Grid, implemented as child Divs in a Div with class \u2018grid\u2019"
+    },
+    {
+        "question": "What is the purpose of the `DialogX` tag?",
+        "answer": "A PicoCSS Dialog, with children inside a Card"
+    },
+    {
+        "question": "What is the purpose of the `Container` tag?",
+        "answer": "A PicoCSS Container, implemented as a Main with class \u2018container\u2019"
+    },
+    {
+        "question": "What are the parameters of the `Script` tag?",
+        "answer": "code:str='', id=None, cls=None, title=None, style=None, attrmap=None, valmap=None, **kwargs"
+    },
+    {
+        "question": "What are the parameters of the `Style` tag?",
+        "answer": "c, id=None, cls=None, title=None, style=None, attrmap=None, valmap=None, **kwargs"
+    },
+    {
+        "question": "What is the purpose of the `double_braces` function?",
+        "answer": "Convert single braces to double braces if next to special chars or newline"
+    },
+    {
+        "question": "What is the purpose of the `undouble_braces` function?",
+        "answer": "Convert double braces to single braces if next to special chars or newline"
+    },
+    {
+        "question": "What is the purpose of the `loose_format` function?",
+        "answer": "String format`s` using `kw`, without being strict about braces outside of template params"
+    },
+    {
+        "question": "What are the parameters of the `ScriptX` tag?",
+        "answer": "fname, src=None, nomodule=None, type=None, _async=None, defer=None, charset=None, crossorigin=None, integrity=None, **kw"
+    },
+    {
+        "question": "What is the purpose of the `replace_css_vars` function?",
+        "answer": "Replace`var(--)` CSS variables with `kwargs` if name prefix matches `pre`"
+    },
+    {
+        "question": "What are the parameters of the `StyleX` tag?",
+        "answer": "fname, **kw"
+    },
+    {
+        "question": "What are the parameters of the `On` function?",
+        "answer": "code:str, event:str='click', sel:str='', me=True"
+    },
+    {
+        "question": "What are the parameters of the `Any` function?",
+        "answer": "sel:str, code:str, event:str='click'"
+    },
+    {
+        "question": "What are the parameters of the `Prev` function?",
+        "answer": "code:str, event:str='click'"
+    },
+    {
+        "question": "What are the parameters of the `Now` function?",
+        "answer": "code:str, sel:str=''"
+    },
+    {
+        "question": "What are the parameters of the `AnyNow` function?",
+        "answer": "sel:str, code:str"
+    },
+    {
+        "question": "What is the purpose of the `run_js` function?",
+        "answer": "Run`js` script, auto-generating `id` based on name of caller if needed, and js-escaping any `kw` params"
+    },
+    {
+        "question": "What are the parameters of the `Titled` tag?",
+        "answer": "title:str='FastHTML app', *args, target_id=None, hx_vals=None, id=None, cls=None, style=None, accesskey=None, contenteditable=None, dir=None, draggable=None, enterkeyhint=None, hidden=None, inert=None, inputmode=None, lang=None, popover=None, spellcheck=None, tabindex=None, translate=None, hx_get=None, hx_post=None, hx_put=None, hx_delete=None, hx_patch=None, hx_trigger=None, hx_target=None, hx_swap=None, hx_include=None, hx_select=None, hx_indicator=None, hx_push_url=None, hx_confirm=None, hx_disable=None, hx_replace_url=None, hx_on=None, **kwargs"
+    },
+    {
+        "question": "What are the parameters of the `Socials` function?",
+        "answer": "title, site_name, description, image, url=None, w=1200, h=630, twitter_site=None, creator=None, card='summary'"
+    },
+    {
+        "question": "What are the parameters of the `Favicon` function?",
+        "answer": "light_icon, dark_icon"
+    },
+    {
+        "question": "What are the parameters of the `jsd` function?",
+        "answer": "org, repo, root, path, prov='gh', typ='script', ver=None, esm=False, **kwargs"
+    },
+    {
+        "question": "What is the purpose of the `clear` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What is an ft component?",
+        "answer": "An ft component is an HTML tag used in FastHTML."
+    },
+    {
+        "question": "What is the purpose of the `NotStr` class?",
+        "answer": "The `NotStr` class is used to use an HTML tag as a string, but it becomes harder to work with as complexity grows."
+    },
+    {
+        "question": "How does Automatic Creation work in FastHTML?",
+        "answer": "Automatic Creation is a method where FastHTML generates the component function for you, creating the HTML just as you wanted."
+    },
+    {
+        "question": "What is the purpose of the `__getattr__` function?",
+        "answer": "The `__getattr__` function is a method that is called to get an attribute, and in `fasthtml.components`, it is defined to create components automatically for you."
+    },
+    {
+        "question": "What is the use of the `ft_hx` function?",
+        "answer": "The `ft_hx` function is used to create components with a 1:1 mapping and a consistent name, which is almost always what you want."
+    },
+    {
+        "question": "How can you create a weird HTML tag that uses underscores?",
+        "answer": "You can create a weird HTML tag that uses underscores by using the `ft_hx` function and replacing underscores with `-`."
+    },
+    {
+        "question": "How can you use a tag that uses characters that are not allowed in function names in python?",
+        "answer": "You can use a tag that uses characters that are not allowed in function names in python by replacing those characters with a hyphen in the `ft_hx` function."
+    },
+    {
+        "question": "How can you define arguments in an HTML tag that use characters that can't be used in python arguments?",
+        "answer": "You can define arguments in an HTML tag that use characters that can't be used in python arguments by using a dictionary in the `ft_hx` function."
+    },
+    {
+        "question": "What is a blog and what are its basic features?",
+        "answer": "A blog is an informational website consisting of discrete, often informal diary-style text entries (posts), which means we need to provide a list of articles, a means to create/edit/delete the articles, and an attractive but accessible layout."
+    },
+    {
+        "question": "Why is it debatable to learn a web framework by copy/pasting code examples?",
+        "answer": "It's debatable because we won't learn through the copy/paste method, it's not the same as doing it ourselves, and we can learn more by typing out every line of code and practicing and repetition."
+    },
+    {
+        "question": "How do we install FastHTML?",
+        "answer": "We can install FastHTML using pip with the command `pip install python-fasthtml`."
+    },
+    {
+        "question": "What is a minimal FastHTML app and how do we create one?",
+        "answer": "A minimal FastHTML app is a basic FastHTML site that we can create by running `python minimal.py` in the terminal."
+    },
+    {
+        "question": "What is the purpose of `import *` in FastHTML and why is it used?",
+        "answer": "The purpose of `import *` is to bring all the symbols from the `fasthtml.common` module into our own code for convenience. It's used because `__all__` is defined in FastHTML's common module, which means only the symbols the framework wants us to have will be brought in."
+    },
+    {
+        "question": "What is the top-level namespace of FastHTML and what does it contain?",
+        "answer": "The top-level namespace of FastHTML (fasthtml.common) contains everything we need from FastHTML to build applications, including a carefully-curated set of FastHTML functions and other Python objects."
+    },
+    {
+        "question": "How do we add dynamic content to our minimal app?",
+        "answer": "We can add dynamic content to our minimal app by using the `random` library to generate a random list of letters, and then using list comprehension to generate a list of `Li` display components, each with their own letter."
+    },
+    {
+        "question": "How do we store articles in our blog?",
+        "answer": "We can store articles in our blog by using our computer's hard drive to store a set of markdown files in a directory within our blog called `posts`."
+    },
+    {
+        "question": "How do we create the blog home page?",
+        "answer": "We can create the blog home page by writing a simple view to list the articles in our blog, using the `pathlib` library to search for markdown files in the `posts` directory."
+    },
+    {
+        "question": "What is the usage of the `fast_app` convenience wrapper?",
+        "answer": "Usage can be summarized as: app, rt = fast_app(); @rt('/'); def get(): return Titled(\"A demo of fast_app()\"); serve()"
+    },
+    {
+        "question": "What is the purpose of the `fast_app` function?",
+        "answer": "_Create a FastHTML or FastHTMLWithLiveReload app._"
+    },
+    {
+        "question": "What are the default values for the `db_file` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What is the default value for the `render` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `hdrs` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `ftrs` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `tbls` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What is the default value for the `before` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `middleware` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What is the default value for the `live` parameter in the `fast_app` function?",
+        "answer": "False"
+    },
+    {
+        "question": "What is the default value for the `debug` parameter in the `fast_app` function?",
+        "answer": "False"
+    },
+    {
+        "question": "What are the default values for the `routes` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `exception_handlers` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `on_startup` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `on_shutdown` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `lifespan` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What is the default value for the `default_hdrs` parameter in the `fast_app` function?",
+        "answer": "True"
+    },
+    {
+        "question": "What are the default values for the `pico` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `surreal` parameter in the `fast_app` function?",
+        "answer": "True"
+    },
+    {
+        "question": "What are the default values for the `htmx` parameter in the `fast_app` function?",
+        "answer": "True"
+    },
+    {
+        "question": "What is the default value for the `ws_hdr` parameter in the `fast_app` function?",
+        "answer": "False"
+    },
+    {
+        "question": "What are the default values for the `secret_key` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What is the default value for the `key_fname` parameter in the `fast_app` function?",
+        "answer": ".sesskey"
+    },
+    {
+        "question": "What is the default value for the `session_cookie` parameter in the `fast_app` function?",
+        "answer": "session_"
+    },
+    {
+        "question": "What is the default value for the `max_age` parameter in the `fast_app` function?",
+        "answer": "31536000"
+    },
+    {
+        "question": "What is the default value for the `sess_path` parameter in the `fast_app` function?",
+        "answer": "/"
+    },
+    {
+        "question": "What is the default value for the `same_site` parameter in the `fast_app` function?",
+        "answer": "lax"
+    },
+    {
+        "question": "What is the default value for the `sess_https_only` parameter in the `fast_app` function?",
+        "answer": "False"
+    },
+    {
+        "question": "What are the default values for the `sess_domain` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `htmlkw` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `bodykw` parameter in the `fast_app` function?",
+        "answer": "None"
+    },
+    {
+        "question": "What are the default values for the `reload_attempts` parameter in the `fast_app` function?",
+        "answer": "1"
+    },
+    {
+        "question": "What are the default values for the `reload_interval` parameter in the `fast_app` function?",
+        "answer": "1000"
+    }
+]
